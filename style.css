@@ -1,0 +1,117 @@
+
+
+/* ---------------------------------------------------------- IMPORTS */
+
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* -------------------------------------------------------- VARIABLES */
+
+
+:root {
+	--grid-box-number: 16;
+}
+
+
+/* ------------------------------------------------------------ RESET */
+
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 10px;
+}
+
+button {
+	font: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------- GENERAL */
+
+
+body {
+	align-items: center;
+	background-color: #EEE;
+	color: #000;
+	column-gap: 30px;
+	display: flex;
+	flex-direction: row;
+	font: 1.6rem 'JetBrains Mono', monospace;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+button {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 5px 15px;
+}
+
+button:hover,
+button:focus {
+	cursor: pointer;
+}
+
+button,
+label {
+	text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------------- SETTINGS */
+
+
+#settings {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 5px;
+}
+
+#rangeSize {
+	margin-bottom: 15px;
+}
+
+.isInvisible {
+	display: none;
+}
+
+
+/* ------------------------------------------------------------- GRID */
+
+
+#grid {
+	aspect-ratio: 1;
+	display: grid;
+	grid-template-columns: repeat(var(--grid-box-number), 1fr);
+	grid-template-rows: repeat(var(--grid-box-number), 1fr);
+	width: 40vw;
+}
+
+.grid-box {
+	aspect-ratio: 1;
+	background-color: #FFF;
+	display: block;
+	transition: background-color .25s ease-in-out;
+}
