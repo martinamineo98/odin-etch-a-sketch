@@ -66,7 +66,7 @@ let buttonRainbow = document.createElement('button')
 		})
 		
 let buttonRandom = document.createElement('button')
-		buttonRandom.textContent = 'Darker Color'
+		buttonRandom.textContent = 'Random Color'
 		buttonRandom.addEventListener('click', () => {
 			if (wantRandomColor == false) {
 				wantRandomColor = true
