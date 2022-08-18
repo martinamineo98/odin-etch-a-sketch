@@ -81,7 +81,15 @@ let buttonRandom = document.createElement('button')
 			buttonRandom.classList.add('isInvisible')
 		})
 		
-let settingsElements = [rangeLabel, rangeSize, buttonDefault, buttonRainbow, buttonRandom]
+let buttonReset = document.createElement('button')
+		buttonReset.setAttribute('id', 'resetBtn')
+		buttonReset.textContent = 'Reset'
+		buttonReset.addEventListener('click', () => {
+			resetGrid()
+			createGrid(16)
+		})
+				
+let settingsElements = [rangeLabel, rangeSize, buttonDefault, buttonRainbow, buttonRandom, buttonReset]
 		settingsElements.forEach((el) => settings.appendChild(el))
 
 // This function creates a new grid and changes the grid settings via

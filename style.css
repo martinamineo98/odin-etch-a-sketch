@@ -93,6 +93,10 @@ label {
 	margin-bottom: 15px;
 }
 
+#resetBtn {
+	margin-top: 15px;
+}
+
 .isInvisible {
 	display: none;
 }
